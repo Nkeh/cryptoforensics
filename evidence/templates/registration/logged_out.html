@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logged Out</title>
+    <link rel="stylesheet" href="{% static 'evidence/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>You have been logged out.</h1>
+        <a href="{% url 'login' %}">Login again</a>
+    </div>
+</body>
+</html>

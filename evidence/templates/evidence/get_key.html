@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get Private Key</title>
+    <link rel="stylesheet" href="{% static 'evidence/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Get Private Key for {{ case.case_id }}</h1>
+        {% if messages %}
+        {% for message in messages %}
+        <div class="message error">{{ message }}</div>
+        {% endfor %}
+        {% endif %}
+        {% if private_key %}
+        <h2>Private Key</h2>
+        <textarea readonly>{{ private_key }}</textarea>
+        <p>Copy this key to use for decryption.</p>
+        {% else %}
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Get Key</button>
+        </form>
+        {% endif %}
+        <a href="{% url 'case_detail' case.case_id %}">Back to Case</a>
+    </div>
+</body>
+</html>

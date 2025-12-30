@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Integrity</title>
+    <link rel="stylesheet" href="{% static 'evidence/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Check Evidence Integrity</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Check</button>
+        </form>
+        <a href="{% url 'dashboard' %}">Back to Dashboard</a>
+    </div>
+</body>
+</html>

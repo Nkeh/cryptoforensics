@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Case Detail</title>
+    <link rel="stylesheet" href="{% static 'evidence/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Case: {{ case.case_id }}</h1>
+        <p>{{ case.description }}</p>
+        {% if keypair %}
+        <a href="{% url 'get_key' case.case_id %}" class="button">Get Private Key</a>
+        {% endif %}
+        <a href="{% url 'ingest_evidence' case.case_id %}">Ingest Evidence</a>
+        <h2>Evidences</h2>
+        <ul>
+            {% for evidence in evidences %}
+            <li><a href="{% url 'file_detail' case.case_id evidence.file_id %}">{{ evidence.file_name }}</a> ({{ evidence.file_id }}) - Status: {{ evidence.status }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'dashboard' %}">Back to Dashboard</a>
+    </div>
+</body>
+</html>

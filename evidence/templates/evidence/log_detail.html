@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log Detail</title>
+    <link rel="stylesheet" href="{% static 'evidence/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Log Detail</h1>
+        <p><strong>User:</strong> {{ log.user.username }}</p>
+        <p><strong>Action:</strong> {{ log.action }}</p>
+        <p><strong>Timestamp:</strong> {{ log.timestamp }}</p>
+        <p><strong>Details:</strong></p>
+        <div style="background: #3a3a3a; padding: 20px; border-radius: 6px; color: #ffffff; font-family: monospace;">
+            {{ log.details|linebreaksbr }}
+        </div>
+        <a href="{% url 'view_logs' %}">Back to Logs</a>
+    </div>
+</body>
+</html>

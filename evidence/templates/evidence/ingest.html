@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ingest Evidence</title>
+    <link rel="stylesheet" href="{% static 'evidence/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Ingest Evidence for {{ case.case_id }}</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Ingest</button>
+        </form>
+        <a href="{% url 'case_detail' case.case_id %}">Back to Case</a>
+    </div>
+</body>
+</html>

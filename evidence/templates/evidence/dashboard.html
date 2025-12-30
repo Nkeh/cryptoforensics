@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'evidence/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard</h1>
+        <div style="text-align: center; margin-bottom: 40px;">
+            <a href="{% url 'create_case' %}" class="button">Create New Case</a>
+            <a href="{% url 'check_integrity' %}" class="button">Check Integrity</a>
+            <a href="{% url 'decrypt_evidence' %}" class="button">Decrypt Evidence</a>
+            <a href="{% url 'view_logs' %}" class="button">View Logs</a>
+        </div>
+        <h2>Your Cases</h2>
+        <ul>
+            {% for case in cases %}
+            <li><a href="{% url 'case_detail' case.case_id %}">{{ case.case_id }}</a> - {{ case.description }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

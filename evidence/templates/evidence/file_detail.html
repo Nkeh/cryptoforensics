@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Detail</title>
+    <link rel="stylesheet" href="{% static 'evidence/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>File: {{ evidence.file_name }}</h1>
+        <p>Case: {{ case.case_id }}</p>
+        <p>File ID: {{ evidence.file_id }}</p>
+        <p>Status: {{ evidence.status }}</p>
+        <p>Hash: {{ evidence.hash_value }}</p>
+        <p>Encrypted Path: {{ evidence.encrypted_path }}</p>
+
+        <h2>Check Integrity</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ check_form.as_p }}
+            <button type="submit" name="check">Check</button>
+        </form>
+        {% if check_result %}
+        <p class="message">{{ check_result }}</p>
+        {% endif %}
+
+        <h2>Decrypt Evidence</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ decrypt_form.as_p }}
+            <button type="submit" name="decrypt">Decrypt</button>
+        </form>
+        {% if decrypt_result %}
+        <p class="message">{{ decrypt_result|safe }}</p>
+        {% endif %}
+
+        <a href="{% url 'case_detail' case.case_id %}">Back to Case</a>
+    </div>
+</body>
+</html>

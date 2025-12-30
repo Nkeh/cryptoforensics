@@ -1,0 +1,171 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #2c2c2c;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+form {
+    margin-bottom: 30px;
+    padding: 30px;
+    background: #3a3a3a;
+    border-radius: 8px;
+    border: 1px solid #555;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.1em;
+}
+
+input[type="text"], input[type="password"], input[type="file"], textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #555;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #4a4a4a;
+    color: #ffffff;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="file"]:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+    padding: 20px;
+    background: #3a3a3a;
+    border-radius: 6px;
+    border: 1px solid #555;
+    transition: background-color 0.3s;
+}
+
+li:hover {
+    background: #454545;
+}
+
+textarea {
+    font-family: 'Courier New', monospace;
+    resize: vertical;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    border: 2px solid #555;
+}
+
+.message {
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.success {
+    background-color: #155724;
+    color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background-color: #721c24;
+    color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
