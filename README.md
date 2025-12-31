@@ -4,30 +4,30 @@ A comprehensive Django-based web application designed for secure digital evidenc
 
 ## Features
 
-### 🔐 **Cryptographic Operations**
+### **Cryptographic Operations**
 - **Symmetric Encryption**: AES via Fernet for fast, secure file encryption
 - **Asymmetric Encryption**: RSA key pairs for secure key wrapping and distribution
 - **Hash Verification**: SHA-256 hashing for tamper detection and integrity checks
 - **Password Protection**: AES-encrypted private keys with PBKDF2 key derivation
 
-### 📁 **Case Management**
+### **Case Management**
 - **Organized Storage**: Hierarchical directory structure for evidence files
 - **Multi-Case Support**: Handle multiple concurrent investigations
 - **User Isolation**: Each user manages their own cases and evidence
 
-### 🔍 **Evidence Operations**
+### **Evidence Operations**
 - **Ingest Evidence**: Upload and automatically encrypt files with integrity verification
 - **Integrity Checking**: Verify file authenticity against stored hashes
 - **Authorized Decryption**: Password-protected key retrieval for evidence access
 - **Secure Downloads**: Direct file downloads with original filenames
 
-### 📊 **Audit & Compliance**
+### **Audit & Compliance**
 - **Comprehensive Logging**: All actions logged with timestamps and user context
 - **Chain of Custody**: Complete audit trail for forensic admissibility
 - **Log Viewer**: Web interface for reviewing all logged activities
 - **Detailed Log Inspection**: Drill-down into specific log entries
 
-### 🎨 **User Interface**
+### **User Interface**
 - **Dark Professional Theme**: Sleek, forensic-appropriate dark interface
 - **Responsive Design**: Clean, mobile-friendly layout
 - **Intuitive Navigation**: Button-based navigation with clear workflows
